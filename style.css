@@ -11,6 +11,10 @@
   box-sizing: border-box;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -176,6 +180,138 @@ body {
   width: 0.85rem;
   height: 0.85rem;
   color: var(--muted);
+}
+
+.clerk-auth,
+.auth-controls,
+.signed-in-controls {
+  display: flex;
+  align-items: center;
+}
+
+.auth-controls {
+  gap: 0.35rem;
+}
+
+.auth-button {
+  min-height: 2.2rem;
+  padding: 0.45rem 0.75rem;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.auth-button:hover,
+.auth-button:focus-visible {
+  background: var(--lavender);
+  border-color: var(--lavender);
+  outline: none;
+}
+
+.auth-button.primary {
+  color: var(--ink);
+  background: var(--lime);
+}
+
+.auth-button.primary:hover,
+.auth-button.primary:focus-visible {
+  background: #c7ec63;
+  border-color: #c7ec63;
+}
+
+.signed-in-controls {
+  min-height: 2.25rem;
+}
+
+.signed-in-controls .cl-userButton-root {
+  display: flex;
+}
+
+.ordia-clerk-backdrop {
+  background: rgba(48, 37, 74, 0.35);
+  backdrop-filter: blur(5px);
+}
+
+.ordia-clerk-modal,
+.ordia-clerk-card {
+  border-radius: 24px;
+}
+
+.ordia-clerk-card {
+  border: 1px solid #e5e0f2;
+  box-shadow: 0 24px 60px rgba(69, 54, 145, 0.2);
+}
+
+.ordia-clerk-title {
+  color: var(--ink);
+}
+
+.ordia-clerk-subtitle,
+.ordia-clerk-label {
+  color: var(--muted);
+}
+
+.ordia-clerk-social-button,
+.ordia-clerk-input {
+  border-color: #e5e0f2;
+}
+
+.ordia-clerk-social-button {
+  color: var(--ink);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.ordia-clerk-social-button:hover {
+  background: var(--lavender);
+  border-color: var(--lavender);
+}
+
+.ordia-clerk-input:focus {
+  border-color: var(--purple);
+  box-shadow: 0 0 0 1px var(--purple);
+}
+
+.ordia-clerk-primary-button {
+  color: var(--ink);
+  background: var(--purple);
+  box-shadow: 0 6px 14px rgba(118, 97, 220, 0.24);
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.ordia-clerk-primary-button:hover {
+  background: #5c4db5;
+  transform: translateY(-1px);
+}
+
+.ordia-clerk-link {
+  color: var(--purple);
+}
+
+.ordia-clerk-link:hover {
+  color: #5c4db5;
+}
+
+.ordia-clerk-user-card {
+  border: 1px solid #e5e0f2;
+  border-radius: 16px;
+  box-shadow: 0 18px 45px rgba(69, 54, 145, 0.18);
+}
+
+.ordia-clerk-user-action {
+  color: var(--ink);
+}
+
+.ordia-clerk-user-action:hover {
+  background: var(--lavender);
 }
 
 #navbar {
@@ -360,6 +496,55 @@ h1 span {
   stroke-width: 2.5;
 }
 
+.back-to-top {
+  position: fixed;
+  z-index: 9;
+  right: 2rem;
+  bottom: 2rem;
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  place-items: center;
+  color: var(--ink);
+  background: var(--lime);
+  border: 1px solid rgba(48, 37, 74, 0.08);
+  border-radius: 50%;
+  box-shadow: 0 12px 25px rgba(69, 54, 145, 0.18);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transform: translateY(1rem);
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease,
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover,
+.back-to-top:focus-visible {
+  background: #c7ec63;
+  box-shadow: 0 16px 30px rgba(69, 54, 145, 0.24);
+  transform: translateY(-3px);
+  outline: none;
+}
+
+.back-to-top svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  stroke-width: 2.5;
+}
+
 @media (max-width: 700px) {
   .topbar {
     top: 0.75rem;
@@ -371,12 +556,22 @@ h1 span {
     display: none;
   }
 
+  .auth-button {
+    padding: 0.4rem 0.55rem;
+    font-size: 0.65rem;
+  }
+
   .topbar-actions {
     gap: 0.15rem;
   }
 
   .topbar-brand {
     font-size: 0.8rem;
+  }
+
+  .back-to-top {
+    right: 1rem;
+    bottom: 1rem;
   }
 
   #navbar {

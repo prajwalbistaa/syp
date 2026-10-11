@@ -6,6 +6,12 @@
     <title>Ordia</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.js"></script>
+    <script
+      async
+      crossorigin="anonymous"
+      data-clerk-publishable-key="pk_test_c2VsZWN0LXN1bmJpcmQtNTkzLmNsZXJrLmFjY291bnRzLmRldiQ"
+      src="https://cdn.jsdelivr.net/npm/@clerk/clerk-js@5/dist/clerk.browser.js"
+    ></script>
   </head>
   <body>
     <header class="topbar">
@@ -30,11 +36,23 @@
         <button class="icon-button" type="button" aria-label="Settings">
           <i data-lucide="settings" aria-hidden="true"></i>
         </button>
-        <a class="profile-chip" href="#">
-          <span class="avatar">AM</span>
-          <span class="profile-name">Alex Morgan</span>
-          <i data-lucide="chevron-down" aria-hidden="true"></i>
-        </a>
+        <div class="clerk-auth" aria-live="polite">
+          <div id="signed-out-controls" class="auth-controls" hidden>
+            <button id="clerk-sign-in" class="auth-button" type="button">
+              Sign in
+            </button>
+            <button
+              id="clerk-sign-up"
+              class="auth-button primary"
+              type="button"
+            >
+              Sign up
+            </button>
+          </div>
+          <div id="signed-in-controls" class="signed-in-controls" hidden>
+            <div id="clerk-user-button"></div>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -88,8 +106,16 @@
         <i data-lucide="arrow-up-right" aria-hidden="true"></i
       ></a>
     </main>
-    <script>
-      lucide.createIcons();
-    </script>
+    <button
+      id="back-to-top"
+      class="back-to-top"
+      type="button"
+      aria-label="Back to top"
+      title="Back to top"
+    >
+      <i data-lucide="arrow-up" aria-hidden="true"></i>
+    </button>
+    <script src="authentication.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
