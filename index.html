@@ -5,18 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ordia</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.js"></script>
   </head>
   <body>
-    <div id="navbar">
-      <div id="navtitle">ORDIA</div>
-      <div id="navcomponents">
-        <div class="navcomponent 1">Dashboard</div>
-        <div class="navcomponent 2">Community</div>
-        <div class="navcomponent 3">Learning Plan</div>
-        <div class="navcomponent 4">To-do List</div>
-        <div class="navcomponent 5">Profile Management</div>
-        <div class="navcomponent 4">Settings</div>
+    <header class="topbar">
+      <a class="topbar-brand" href="#" aria-label="Ordia home">
+        <span class="topbar-brand-mark">O</span>
+        <span>ORDIA</span>
+      </a>
+      <nav class="topbar-links" aria-label="Quick links">
+        <a class="topbar-link current" href="#">Overview</a>
+        <a class="topbar-link" href="#">Focus</a>
+        <a class="topbar-link" href="#">Calendar</a>
+      </nav>
+      <div class="topbar-actions">
+        <button
+          class="icon-button notification-button"
+          type="button"
+          aria-label="Notifications"
+        >
+          <i data-lucide="bell" aria-hidden="true"></i>
+          <span class="notification-dot" aria-hidden="true"></span>
+        </button>
+        <button class="icon-button" type="button" aria-label="Settings">
+          <i data-lucide="settings-2" aria-hidden="true"></i>
+        </button>
+        <a class="profile-chip" href="#">
+          <span class="avatar">AM</span>
+          <span class="profile-name">Alex Morgan</span>
+          <i data-lucide="chevron-down" aria-hidden="true"></i>
+        </a>
       </div>
-    </div>
+    </header>
+
+    <nav id="navbar" aria-label="Main navigation">
+      <div class="brand-row">
+        <div id="navtitle">ORDIA</div>
+        <span class="brand-mark" aria-hidden="true">O</span>
+      </div>
+      <p class="nav-caption">Your space to grow</p>
+      <div id="navcomponents">
+        <a class="navcomponent active" href="#"
+          ><i
+            class="nav-icon"
+            data-lucide="layout-dashboard"
+            aria-hidden="true"
+          ></i
+          >Dashboard</a
+        >
+        <a class="navcomponent" href="#"
+          ><i class="nav-icon" data-lucide="sparkles" aria-hidden="true"></i
+          >Community</a
+        >
+        <a class="navcomponent" href="#"
+          ><i
+            class="nav-icon"
+            data-lucide="book-open-check"
+            aria-hidden="true"
+          ></i
+          >Learning Plan</a
+        >
+        <a class="navcomponent" href="#"
+          ><i class="nav-icon" data-lucide="list-checks" aria-hidden="true"></i
+          >To-do List</a
+        >
+      </div>
+      <div class="nav-footer">
+        <span class="status-dot"></span>
+        <span>All systems ready</span>
+      </div>
+    </nav>
+
+    <main class="welcome-panel">
+      <p class="eyebrow">Tuesday, October 11</p>
+      <h1>Make room for<br /><span>what matters.</span></h1>
+      <p class="welcome-copy">
+        A calmer way to plan your days, learn at your pace, and stay connected
+        to your goals.
+      </p>
+      <a class="welcome-action" href="#"
+        >Open your dashboard
+        <i data-lucide="arrow-up-right" aria-hidden="true"></i
+      ></a>
+    </main>
+    <script>
+      lucide.createIcons();
+    </script>
   </body>
 </html>
