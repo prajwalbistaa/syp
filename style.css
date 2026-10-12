@@ -519,6 +519,7 @@ h1 span {
   z-index: 20;
   inset: 0;
   display: grid;
+  overflow: hidden;
   padding: 6rem 1.5rem 2rem;
   place-items: center;
   background: rgba(48, 37, 74, 0.34);
@@ -528,14 +529,46 @@ h1 span {
 .faq-section {
   position: relative;
   width: min(100%, 58rem);
-  max-height: min(44rem, calc(100vh - 8rem));
-  padding: 3rem clamp(1.25rem, 4vw, 3.25rem) 2.5rem;
-  overflow-y: auto;
+  height: min(44rem, calc(100vh - 8rem));
+  max-height: calc(100vh - 8rem);
+  min-height: 0;
+  padding: 3rem 0 0;
+  overflow: hidden;
   background: rgba(246, 244, 251, 0.98);
   border: 1px solid rgba(255, 255, 255, 0.9);
   border-radius: 24px;
   box-shadow: 0 24px 70px rgba(48, 37, 74, 0.24);
   animation: faq-modal-in 0.22s ease-out;
+}
+
+.faq-scroll-area {
+  height: 100%;
+  min-height: 0;
+  padding: 0 clamp(1.5rem, 4vw, 3.5rem) 2.5rem;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(118, 97, 220, 0.62) rgba(220, 213, 255, 0.42);
+}
+
+.faq-scroll-area::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+.faq-scroll-area::-webkit-scrollbar-track {
+  margin: 0.75rem 0;
+  background: rgba(220, 213, 255, 0.42);
+  border-radius: 999px;
+}
+
+.faq-scroll-area::-webkit-scrollbar-thumb {
+  background: rgba(118, 97, 220, 0.62);
+  border: 2px solid rgba(246, 244, 251, 0.98);
+  border-radius: 999px;
+}
+
+.faq-scroll-area::-webkit-scrollbar-thumb:hover {
+  background: var(--purple);
 }
 
 @keyframes faq-modal-in {
@@ -760,8 +793,13 @@ h1 span {
   }
 
   .faq-section {
+    height: calc(100vh - 6rem);
     max-height: calc(100vh - 6rem);
-    padding: 3rem 1rem 1.5rem;
+    padding: 3rem 0 0;
+  }
+
+  .faq-scroll-area {
+    padding: 0 1rem 1.5rem;
   }
 
   .faq-heading h1 {
