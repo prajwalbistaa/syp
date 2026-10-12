@@ -1,8 +1,8 @@
-lucide.createIcons();
-
+// Clerk is loaded from the CDN in index.html; wait for it before wiring auth UI.
 window.addEventListener("load", async () => {
   await Clerk.load();
 
+  // Shared styling for Clerk's hosted sign-in, sign-up, and user menu surfaces.
   const clerkAppearance = {
     variables: {
       colorPrimary: "#7661dc",
@@ -49,6 +49,8 @@ window.addEventListener("load", async () => {
       setControlVisibility(signedInControls, true);
       Clerk.closeSignIn();
       Clerk.closeSignUp();
+
+      // Clerk user buttons should only be mounted once into the target element.
       if (!userButtonMounted) {
         Clerk.mountUserButton(userButtonContainer, {
           appearance: clerkAppearance,
@@ -74,6 +76,7 @@ window.addEventListener("load", async () => {
 
   renderAuthControls();
 
+  // Prompt visitors to create an account when they first open the app.
   if (!Clerk.user) {
     Clerk.openSignUp({ appearance: clerkAppearance });
   }

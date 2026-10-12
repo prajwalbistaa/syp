@@ -1,3 +1,4 @@
+/* Theme tokens used across the Ordia frontend. */
 :root {
   --ink: #30254a;
   --muted: #726a8b;
@@ -7,6 +8,7 @@
   --paper: #f6f4fb;
 }
 
+/* Base page setup and small resets. */
 * {
   box-sizing: border-box;
 }
@@ -29,6 +31,7 @@ body.faq-open {
   overflow: hidden;
 }
 
+/* Top navigation and header action controls. */
 .topbar {
   position: fixed;
   z-index: 10;
@@ -250,6 +253,7 @@ body.faq-open {
   display: flex;
 }
 
+/* Clerk modal/user-button overrides so hosted auth matches the Ordia UI. */
 .ordia-clerk-backdrop {
   background: rgba(48, 37, 74, 0.35);
   backdrop-filter: blur(5px);
@@ -332,6 +336,7 @@ body.faq-open {
   background: var(--lavender);
 }
 
+/* Sidebar navigation. */
 #navbar {
   background: linear-gradient(160deg, #7764dc 0%, #5c4db5 100%);
   display: flex;
@@ -449,6 +454,7 @@ body.faq-open {
   box-shadow: 0 0 0 4px rgba(215, 248, 121, 0.12);
 }
 
+/* Welcome panel and primary call to action. */
 .welcome-panel {
   max-width: 35rem;
   padding: 15vh 5rem 5rem 25rem;
@@ -514,6 +520,7 @@ h1 span {
   stroke-width: 2.5;
 }
 
+/* FAQ overlay dialog and accordion list. */
 .faq-overlay {
   position: fixed;
   z-index: 20;
@@ -693,6 +700,7 @@ h1 span {
   padding-bottom: 1.1rem;
 }
 
+/* Floating back-to-top utility button. */
 .back-to-top {
   position: fixed;
   z-index: 9;
@@ -742,6 +750,7 @@ h1 span {
   stroke-width: 2.5;
 }
 
+/* Compact layout adjustments for small screens. */
 @media (max-width: 700px) {
   .topbar {
     top: 0.75rem;

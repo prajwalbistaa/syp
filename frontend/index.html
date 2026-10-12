@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ordia</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- External libraries used by the frontend scripts below. -->
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.js"></script>
     <script
       async
@@ -14,6 +16,7 @@
     ></script>
   </head>
   <body>
+    <!-- Fixed top navigation with quick links, utility actions, and Clerk auth controls. -->
     <header class="topbar">
       <a class="topbar-brand" href="#" aria-label="Ordia home">
         <span class="topbar-brand-mark">O</span>
@@ -62,6 +65,7 @@
       </div>
     </header>
 
+    <!-- Primary app navigation. Links are placeholders until separate pages/views are added. -->
     <nav id="navbar" aria-label="Main navigation">
       <div class="brand-row">
         <div id="navtitle">ORDIA</div>
@@ -100,6 +104,7 @@
       </div>
     </nav>
 
+    <!-- Main welcome panel shown on the first screen. -->
     <main class="welcome-panel">
       <p class="eyebrow">Tuesday, October 11</p>
       <h1>Make room for<br /><span>what matters.</span></h1>
@@ -112,6 +117,8 @@
         <i data-lucide="arrow-up-right" aria-hidden="true"></i
       ></a>
     </main>
+
+    <!-- FAQ dialog. Questions are rendered by faq.js from the content in faq-data.js. -->
     <div id="faq-overlay" class="faq-overlay" hidden>
       <section
         id="faq-section"
@@ -138,6 +145,8 @@
         </div>
       </section>
     </div>
+
+    <!-- Floating utility button controlled by back-to-top.js. -->
     <button
       id="back-to-top"
       class="back-to-top"
@@ -147,8 +156,16 @@
     >
       <i data-lucide="arrow-up" aria-hidden="true"></i>
     </button>
-    <script src="authentication.js"></script>
-    <script src="script.js"></script>
-    <script src="faq.js"></script>
+
+    <!-- Initialize Lucide placeholders after the page markup has loaded. -->
+    <script>
+      lucide.createIcons();
+    </script>
+    <!-- Load feature scripts in dependency order. -->
+    <script src="assets/js/authentication.js"></script>
+    <script src="assets/js/live-clock.js"></script>
+    <script src="assets/js/back-to-top.js"></script>
+    <script src="assets/js/faq-data.js"></script>
+    <script src="assets/js/faq.js"></script>
   </body>
 </html>
