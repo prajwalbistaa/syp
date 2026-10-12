@@ -20,9 +20,9 @@
         <span>ORDIA</span>
       </a>
       <nav class="topbar-links" aria-label="Quick links">
-        <a class="topbar-link current" href="#">AI Bot</a>
-        <a class="topbar-link" href="#">Timer</a>
+        <a class="topbar-link current" href="#">Timer</a>
         <a class="topbar-link" href="#">Plans</a>
+        <a id="faqs-link" class="topbar-link" href="#faqs">FAQs</a>
       </nav>
       <div class="topbar-actions">
         <time
@@ -112,6 +112,30 @@
         <i data-lucide="arrow-up-right" aria-hidden="true"></i
       ></a>
     </main>
+    <div id="faq-overlay" class="faq-overlay" hidden>
+      <section
+        id="faq-section"
+        class="faq-section"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="faq-title"
+      >
+        <button
+          id="faq-close"
+          class="faq-close"
+          type="button"
+          aria-label="Close frequently asked questions"
+          title="Close FAQs"
+        >
+          <i data-lucide="x" aria-hidden="true"></i>
+        </button>
+        <div class="faq-heading">
+          <p class="eyebrow">Ordia support</p>
+          <h1 id="faq-title">Frequently Asked Questions</h1>
+        </div>
+        <div id="faq-list" class="faq-list"></div>
+      </section>
+    </div>
     <button
       id="back-to-top"
       class="back-to-top"
