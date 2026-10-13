@@ -388,7 +388,7 @@ body.faq-open {
 #navcomponents {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 1.7rem;
 }
 
 .navcomponent {
@@ -813,5 +813,608 @@ h1 span {
 
   .faq-heading h1 {
     font-size: 2.6rem;
+  }
+}
+
+/*Billing cards */
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 15px;
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--primary-light)
+  );
+  display: inline-block;
+  background-clip: text;
+  -webkit-background-clip: text; /* For  SAFARI*/
+  color: transparent;
+}
+
+header p {
+  color: var(--text-gray);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  position: relative;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+  background-color: var(--card-hover);
+}
+
+.card-header {
+  padding: 30px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.plan-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(
+    135deg,
+    rgba(74, 222, 128, 0.2),
+    rgba(74, 222, 128, 0.05)
+  );
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.plan-icon i {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.price {
+  margin-bottom: 15px;
+}
+
+.currency {
+  font-size: 1.5rem;
+  margin-right: 2px;
+  color: var(--primary-color);
+  vertical-align: top;
+}
+
+.amount {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--primary-color);
+}
+
+.period {
+  font-size: 1rem;
+  color: var(--text-gray);
+}
+
+.description {
+  font-size: 0.95rem;
+  color: var(--text-gray);
+}
+
+.card-body {
+  padding: 30px;
+  flex-grow: 1;
+}
+
+.features {
+  list-style: none;
+}
+
+.features li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.features li i {
+  margin-right: 10px;
+  font-size: 0.9rem;
+}
+
+.features li i.fa-check {
+  color: var(--primary-color);
+}
+
+.features li i.fa-times {
+  color: #ef4444;
+}
+
+.features li.disabled {
+  opacity: 0.7;
+  color: var(--text-gray);
+}
+
+.card-footer {
+  padding: 20px 30px 30px;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text-light);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  border-color: var(--primary-color);
+  background-color: rgba(74, 222, 128, 0.1);
+}
+
+.btn-accent {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #000;
+}
+
+.btn-accent:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.popular {
+  transform: scale(1.05);
+  border: 2px solid var(--primary-color);
+  z-index: 2;
+}
+
+.popular:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+.popular-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: var(--primary-color);
+  color: #000;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px;
+  z-index: 3;
+}
+
+.testimonial {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.quote {
+  max-width: 700px;
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 40px;
+  position: relative;
+  box-shadow: var(--shadow-md);
+}
+
+.quote i {
+  color: var(--primary-color);
+  font-size: 2rem;
+  opacity: 0.3;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.quote p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1.7;
+  position: relative;
+  padding-left: 15px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+  border: 2px solid var(--primary-color);
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info h4 {
+  font-size: 1.1rem;
+  margin-bottom: 3px;
+}
+
+.info p {
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 30px 15px;
+  }
+
+  header {
+    margin-bottom: 30px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .pricing-cards {
+    grid-template-columns: 1fr;
+    min-width: 400px;
+    margin: 0 auto 40px;
+  }
+
+  .card,
+  .popular {
+    transform: none;
+  }
+  .card:hover,
+  .popular:hover {
+    transform: translateY(-5px);
+  }
+
+  .testimonial {
+    margin-top: 40px;
+  }
+
+  .quote {
+    padding: 30px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(74, 222, 128, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+  }
+}
+
+.btn-accent {
+  animation: pulse 2s infinite;
+}
+
+/* Ordia plan modal overrides the imported billing template without changing the app shell. */
+body {
+  display: block;
+  padding: 0;
+  line-height: normal;
+}
+
+.topbar {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.plans-overlay {
+  position: fixed;
+  z-index: 20;
+  inset: 0;
+  display: grid;
+  overflow: hidden;
+  padding: 6rem 1.5rem 2rem;
+  place-items: center;
+  background: rgba(48, 37, 74, 0.34);
+  backdrop-filter: blur(6px);
+}
+
+.plans-section {
+  position: relative;
+  width: min(100%, 58rem);
+  height: min(44rem, calc(100vh - 8rem));
+  min-height: 0;
+  padding: 3rem 0 0;
+  overflow: hidden;
+  color: var(--ink);
+  background: rgba(246, 244, 251, 0.98);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 24px;
+  box-shadow: 0 24px 70px rgba(48, 37, 74, 0.24);
+  animation: faq-modal-in 0.22s ease-out;
+}
+
+.plans-scroll-area {
+  height: 100%;
+  min-height: 0;
+  padding: 0 clamp(1.25rem, 4vw, 3.25rem) 2rem;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(118, 97, 220, 0.62) rgba(220, 213, 255, 0.42);
+}
+
+.plans-scroll-area::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+.plans-scroll-area::-webkit-scrollbar-track {
+  margin: 0.75rem 0;
+  background: rgba(220, 213, 255, 0.42);
+  border-radius: 999px;
+}
+
+.plans-scroll-area::-webkit-scrollbar-thumb {
+  background: rgba(118, 97, 220, 0.62);
+  border: 2px solid rgba(246, 244, 251, 0.98);
+  border-radius: 999px;
+}
+
+.plans-heading {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.plans-heading .eyebrow {
+  margin-bottom: 0.7rem;
+}
+
+.plans-heading h1 {
+  margin-bottom: 0.65rem;
+  color: var(--ink);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.plans-heading p:last-child {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0;
+}
+
+.plan-card {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  padding: 1.35rem;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid #e5e0f2;
+  border-radius: 16px;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.plan-card:hover,
+.plan-card.is-selected {
+  border-color: rgba(118, 97, 220, 0.5);
+  box-shadow: 0 14px 28px rgba(69, 54, 145, 0.12);
+  transform: translateY(-3px);
+}
+
+.plan-card.is-popular {
+  border-color: rgba(118, 97, 220, 0.65);
+}
+
+.plan-badge {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  padding: 0.3rem 0.55rem;
+  color: var(--ink);
+  background: var(--lime);
+  border-radius: 999px;
+  font-size: 0.62rem;
+  font-weight: 800;
+}
+
+.plan-icon {
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin-bottom: 1rem;
+  place-items: center;
+  color: var(--purple);
+  background: var(--lavender);
+  border-radius: 12px;
+}
+
+.plan-icon svg {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.plan-card h2 {
+  margin: 0 0 0.45rem;
+  font-size: 1.25rem;
+}
+
+.plan-description {
+  min-height: 3.1rem;
+  margin: 0 0 1.2rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.plan-price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.plan-price strong {
+  color: var(--purple);
+  font-size: 2.35rem;
+  line-height: 1;
+}
+
+.plan-price span {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.plan-features {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0 0 1.4rem;
+  padding: 0;
+  list-style: none;
+}
+
+.plan-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--muted);
+  font-size: 0.76rem;
+}
+
+.plan-features svg {
+  flex: 0 0 auto;
+  width: 0.9rem;
+  height: 0.9rem;
+  color: var(--purple);
+}
+
+.plan-button {
+  width: 100%;
+  margin-top: auto;
+  padding: 0.75rem 0.8rem;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid #d8d1ef;
+  border-radius: 9px;
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.plan-button:hover,
+.plan-button:focus-visible {
+  background: var(--lavender);
+  border-color: var(--purple);
+  outline: none;
+}
+
+.plan-button.primary {
+  background: var(--purple);
+  border-color: var(--purple);
+}
+
+.plan-button.primary:hover,
+.plan-button.primary:focus-visible {
+  color: white;
+  background: #5c4db5;
+}
+
+.plan-selection-status {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 0;
+  }
+
+  .plans-overlay {
+    padding: 5rem 0.75rem 1rem;
+  }
+
+  .plans-section {
+    height: calc(100vh - 6rem);
+  }
+
+  .pricing-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-description {
+    min-height: 0;
   }
 }

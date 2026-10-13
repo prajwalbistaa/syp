@@ -24,7 +24,7 @@
       </a>
       <nav class="topbar-links" aria-label="Quick links">
         <a class="topbar-link current" href="#">Focus</a>
-        <a class="topbar-link" href="#">Plans</a>
+        <a id="plans-link" class="topbar-link" href="#plans">Plans</a>
         <a id="faqs-link" class="topbar-link" href="#faqs">FAQs</a>
       </nav>
       <div class="topbar-actions">
@@ -97,6 +97,10 @@
           ><i class="nav-icon" data-lucide="list-checks" aria-hidden="true"></i
           >To-do List</a
         >
+        <a class="navcomponent" href="#agent"
+          ><i class="nav-icon" data-lucide="bot" aria-hidden="true"></i>My
+          Agent</a
+        >
       </div>
       <div class="nav-footer">
         <span class="status-dot"></span>
@@ -157,6 +161,41 @@
       <i data-lucide="arrow-up" aria-hidden="true"></i>
     </button>
 
+    <!-- Plans modal. Selection is handled by plans.js without starting a payment flow. -->
+    <div id="plans-overlay" class="plans-overlay" hidden>
+      <section
+        id="plans-section"
+        class="plans-section"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="plans-title"
+      >
+        <button
+          id="plans-close"
+          class="faq-close"
+          type="button"
+          aria-label="Close plans"
+          title="Close plans"
+        >
+          <i data-lucide="x" aria-hidden="true"></i>
+        </button>
+        <div class="plans-scroll-area">
+          <div class="plans-heading">
+            <p class="eyebrow">Ordia plans</p>
+            <h1 id="plans-title">Choose your plan</h1>
+            <p>Start free, then choose a billing cycle when you are ready.</p>
+          </div>
+          <div id="pricing-cards" class="pricing-cards"></div>
+          <p
+            id="plan-selection-status"
+            class="plan-selection-status"
+            role="status"
+            hidden
+          ></p>
+        </div>
+      </section>
+    </div>
+
     <!-- Initialize Lucide placeholders after the page markup has loaded. -->
     <script>
       lucide.createIcons();
@@ -167,5 +206,6 @@
     <script src="assets/js/back-to-top.js"></script>
     <script src="assets/js/faq-data.js"></script>
     <script src="assets/js/faq.js"></script>
+    <script src="assets/js/plans.js"></script>
   </body>
 </html>
