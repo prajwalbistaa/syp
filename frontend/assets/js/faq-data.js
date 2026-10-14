@@ -36,8 +36,8 @@ window.ordiaFaqItems = [
       "Click the Focus option in the topbar to access the timer. Select a timer plan for the amount of time you want to focus and start your session. Use this feature to dedicate a specific period to studying or completing a task.",
   },
   {
-    question: "What is the difference between Free and Premium?",
+    question: "What is the difference between Free, Monthly, and Yearly Plan?",
     answer:
-      "Ordia provides Free and Premium subscription options. Open Plans from the topbar to review the available plans, features, and pricing. Compare the details displayed there before deciding which option suits your needs.",
+      "Ordia provides Free, Monthly, and Yearly subscription options. Open Plans from the topbar to review the available plans, features, and pricing. Compare the details displayed there before deciding which option suits your needs.",
   },
 ];

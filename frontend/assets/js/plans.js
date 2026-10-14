@@ -10,7 +10,7 @@ const planOptions = [
     name: "Free",
     icon: "sprout",
     price: "Rs.0",
-    period: "forever",
+    period: "",
     description: "A simple starting point for building your learning habit.",
     features: [
       "Dashboard progress",

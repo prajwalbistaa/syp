@@ -34,6 +34,7 @@ window.addEventListener("load", async () => {
   const signedOutControls = document.getElementById("signed-out-controls");
   const signedInControls = document.getElementById("signed-in-controls");
   const userButtonContainer = document.getElementById("clerk-user-button");
+  const joinOrdiaButton = document.getElementById("join-ordia");
   let userButtonMounted = false;
 
   const setControlVisibility = (element, visible) => {
@@ -73,6 +74,10 @@ window.addEventListener("load", async () => {
     .addEventListener("click", () =>
       Clerk.openSignUp({ appearance: clerkAppearance }),
     );
+  joinOrdiaButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    Clerk.openSignUp({ appearance: clerkAppearance });
+  });
 
   renderAuthControls();
 
