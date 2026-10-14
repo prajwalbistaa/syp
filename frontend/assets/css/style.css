@@ -153,17 +153,6 @@ body.faq-open {
   height: 1.05rem;
 }
 
-.notification-dot {
-  position: absolute;
-  top: 0.45rem;
-  right: 0.45rem;
-  width: 0.35rem;
-  height: 0.35rem;
-  background: #f08080;
-  border: 2px solid white;
-  border-radius: 50%;
-}
-
 .profile-chip {
   display: inline-flex;
   align-items: center;

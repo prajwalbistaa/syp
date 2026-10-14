@@ -1,7 +1,17 @@
 const liveClock = document.getElementById("live-clock");
+const liveDate = document.getElementById("live-date");
 
 const updateLiveClock = () => {
   const now = new Date();
+
+  if (liveDate) {
+    liveDate.textContent = now.toLocaleDateString([], {
+      weekday: "long",
+      month: "long",
+      day: "numeric",
+    });
+    liveDate.dateTime = now.toISOString().slice(0, 10);
+  }
 
   // Show a readable time while keeping the machine-readable datetime updated.
   liveClock.textContent = now.toLocaleTimeString([], {

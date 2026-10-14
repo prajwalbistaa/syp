@@ -40,7 +40,6 @@
           aria-label="Notifications"
         >
           <i data-lucide="bell" aria-hidden="true"></i>
-          <span class="notification-dot" aria-hidden="true"></span>
         </button>
         <button class="icon-button" type="button" aria-label="Settings">
           <i data-lucide="settings" aria-hidden="true"></i>
@@ -110,7 +109,12 @@
 
     <!-- Main welcome panel shown on the first screen. -->
     <main class="welcome-panel">
-      <p class="eyebrow">Tuesday, October 11</p>
+      <time
+        id="live-date"
+        class="eyebrow"
+        datetime=""
+        aria-label="Current date"
+      ></time>
       <h1>Make<br />room for<br /><span>what matters.</span></h1>
       <p class="welcome-copy">
         A calmer way to plan your days, learn at your pace, and stay connected
