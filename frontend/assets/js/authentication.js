@@ -36,6 +36,7 @@ window.addEventListener("load", async () => {
   const signedInControls = document.getElementById("signed-in-controls");
   const userButtonContainer = document.getElementById("clerk-user-button");
   const joinOrdiaButton = document.getElementById("join-ordia");
+  const getStartedLink = document.getElementById("get-started-link");
   let userButtonMounted = false;
 
   // Signed-out visitors must authenticate before opening app features.
@@ -91,12 +92,19 @@ window.addEventListener("load", async () => {
     .addEventListener("click", () =>
       Clerk.openSignUp({ appearance: clerkAppearance }),
     );
-  joinOrdiaButton.addEventListener("click", (event) => {
+  const openSignUp = (event) => {
     event.preventDefault();
     Clerk.openSignUp({ appearance: clerkAppearance });
-  });
+  };
+
+  joinOrdiaButton.addEventListener("click", openSignUp);
+  getStartedLink.addEventListener("click", openSignUp);
 
   renderAuthControls();
+
+  if (window.location.hash.toLowerCase() === "#getstarted") {
+    Clerk.openSignUp({ appearance: clerkAppearance });
+  }
 
   Clerk.addListener((resources) => renderAuthControls(resources));
 });

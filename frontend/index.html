@@ -24,8 +24,7 @@
       </a>
       <nav class="topbar-links" aria-label="Quick links">
         <a class="topbar-link current" href="#" data-auth-required>Focus</a>
-        <a id="plans-link" class="topbar-link" href="#plans" data-auth-required
-          >Plans</a
+        <a id="plans-link" class="topbar-link" href="#plans">Plans</a
         >
         <a id="faqs-link" class="topbar-link" href="#faqs">FAQs</a>
       </nav>
@@ -229,16 +228,289 @@
       </section>
     </div>
 
+    <!-- About dialog. Uses the same overlay size and close behavior as FAQs. -->
+    <div id="about-overlay" class="faq-overlay" hidden>
+      <section
+        id="about-section"
+        class="faq-section"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="about-title"
+      >
+        <button
+          id="about-close"
+          class="faq-close"
+          type="button"
+          aria-label="Close about Ordia"
+          title="Close About"
+        >
+          <i data-lucide="x" aria-hidden="true"></i>
+        </button>
+        <div class="faq-scroll-area">
+          <div class="faq-heading">
+            <p class="eyebrow">About Ordia</p>
+            <h1 id="about-title">Make Your Learning Journey More Organised</h1>
+          </div>
+          <div class="legal-copy">
+            <p>
+              Ordia is a learning management platform designed to help people
+              organise their learning journey in one place. Whether you are
+              learning a new skill, exploring a different subject, or working
+              towards a personal goal, Ordia helps you bring structure to the
+              process.
+            </p>
+            <p>
+              With personalised learning plans, progress tracking, a community
+              for discovering shared learning plans, a to-do list, and a focus
+              timer, Ordia aims to make independent learning more organised,
+              manageable, and consistent.
+            </p>
+            <p>
+              Our goal is simple: to help learners move beyond collecting
+              resources and start making meaningful progress towards what they
+              want to learn.
+            </p>
+            <p class="legal-tagline">
+              <strong
+                >Plan your learning. Stay focused. Track your progress. Keep
+                growing.</strong
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Privacy policy dialog. Uses the same overlay size and close behavior as FAQs. -->
+    <div id="privacy-overlay" class="faq-overlay" hidden>
+      <section
+        id="privacy-section"
+        class="faq-section"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="privacy-title"
+      >
+        <button
+          id="privacy-close"
+          class="faq-close"
+          type="button"
+          aria-label="Close privacy policy"
+          title="Close Privacy Policy"
+        >
+          <i data-lucide="x" aria-hidden="true"></i>
+        </button>
+        <div class="faq-scroll-area">
+          <div class="faq-heading">
+            <p class="eyebrow">Ordia</p>
+            <h1 id="privacy-title">Privacy Policy</h1>
+            <p class="legal-updated">Last updated: October 14, 2026</p>
+          </div>
+          <div class="legal-copy">
+            <h2>1. Introduction</h2>
+            <p>
+              Welcome to Ordia. We value your privacy and are committed to being
+              transparent about how your information is collected, used, and
+              protected when you use our platform.
+            </p>
+            <p>
+              This Privacy Policy explains what information Ordia may collect,
+              how it may be used, and the choices available to you when using
+              our services.
+            </p>
+
+            <h2>2. Information We Collect</h2>
+            <p>
+              Depending on the features you use, Ordia may collect the following
+              types of information:
+            </p>
+            <p>
+              <strong>Account Information:</strong> Information such as your
+              name, email address, username, and other details you provide when
+              creating or managing your account.
+            </p>
+            <p>
+              <strong>Learning Information:</strong> Learning plans, activities,
+              to-do lists, progress records, and other content you create or
+              save within Ordia.
+            </p>
+            <p>
+              <strong>Community Content:</strong> Learning plans and profile
+              information you choose to share through the Community feature.
+            </p>
+            <p>
+              <strong>Usage and Technical Information:</strong> Information such
+              as browser type, device details, technical logs, and website
+              interactions may be collected if enabled by the services used to
+              operate Ordia.
+            </p>
+            <p>
+              <strong>Payment Information:</strong> If you subscribe to Premium,
+              payment-related information may be processed by the payment
+              provider used by Ordia. The details depend on the payment system
+              implemented.
+            </p>
+
+            <h2>3. How We Use Your Information</h2>
+            <p>Information collected through Ordia may be used to:</p>
+            <ul>
+              <li>Create and manage your account.</li>
+              <li>Save and display your learning plans and progress.</li>
+              <li>
+                Provide the Dashboard, Community, To-Do List, and Focus Timer
+                features.
+              </li>
+              <li>Manage subscriptions and process payments, where applicable.</li>
+              <li>Maintain the security and reliability of the platform.</li>
+              <li>Respond to support requests.</li>
+              <li>Improve the user experience and platform functionality.</li>
+            </ul>
+            <p>
+              Ordia should only use personal information for purposes that are
+              disclosed to users and permitted by applicable law.
+            </p>
+
+            <h2>4. Community and Shared Content</h2>
+            <p>
+              Ordia allows users to explore learning plans shared through the
+              Community feature.
+            </p>
+            <p>
+              Before publishing a learning plan or other content, review the
+              information it contains. Content you choose to share may be
+              visible to other users according to the visibility settings
+              provided by Ordia.
+            </p>
+            <p>
+              Do not include sensitive personal information in content intended
+              to be shared publicly.
+            </p>
+
+            <h2>5. Sharing of Information</h2>
+            <p>
+              Ordia may need to share limited information with service providers
+              that support the platform, such as hosting, authentication,
+              analytics, or payment providers, where those services are used.
+            </p>
+            <p>
+              Information may also be disclosed when required by law or when
+              necessary to protect the platform, its users, or the rights of
+              others.
+            </p>
+            <p>
+              <strong>Before publishing:</strong> Identify the actual
+              third-party providers used by Ordia and ensure this section
+              accurately describes when and why information is shared.
+            </p>
+
+            <h2>6. Cookies and Similar Technologies</h2>
+            <p>
+              Ordia or its service providers may use cookies or similar
+              technologies to support essential website functionality, maintain
+              sessions, remember preferences, and measure website usage where
+              applicable.
+            </p>
+            <p>
+              You can manage cookies through your browser settings. Disabling
+              certain cookies may affect the functionality of some parts of the
+              website.
+            </p>
+            <p>
+              The published policy should describe the specific cookies and
+              tracking technologies actually used by Ordia.
+            </p>
+
+            <h2>7. Data Security</h2>
+            <p>
+              We aim to protect information associated with Ordia through
+              appropriate technical and organisational security measures.
+            </p>
+            <p>
+              However, no website or method of electronic storage or
+              transmission can guarantee absolute security. Users should protect
+              their account credentials and avoid sharing their passwords with
+              others.
+            </p>
+
+            <h2>8. Data Retention and Deletion</h2>
+            <p>
+              Ordia should retain personal information only for as long as
+              necessary to provide its services, meet legitimate operational
+              needs, resolve disputes, and comply with applicable legal
+              requirements.
+            </p>
+            <p>
+              Users should be able to contact Ordia to request access to,
+              correction of, or deletion of their personal information, subject
+              to applicable requirements.
+            </p>
+            <p>
+              The actual account deletion process and any exceptions should be
+              explained here once implemented.
+            </p>
+
+            <h2>9. Your Privacy Choices</h2>
+            <p>
+              Depending on applicable law and the features available, you may be
+              able to request access to your personal information, correct
+              inaccurate details, request deletion, or withdraw consent where
+              processing is based on consent.
+            </p>
+            <p>
+              To make a privacy-related request, contact Ordia using the contact
+              details below.
+            </p>
+
+            <h2>10. Children's Privacy</h2>
+            <p>
+              Ordia is not intended to collect personal information from
+              children in violation of applicable privacy laws. If you believe a
+              child has provided personal information inappropriately, contact
+              us so the matter can be reviewed.
+            </p>
+
+            <h2>11. Third-Party Websites</h2>
+            <p>
+              Ordia may contain links to third-party websites, courses,
+              articles, videos, and other learning resources. These external
+              services operate under their own privacy policies, and Ordia is
+              not responsible for their independent privacy practices.
+            </p>
+            <p>
+              Users should review the relevant policies before providing
+              personal information to an external service.
+            </p>
+
+            <h2>12. Changes to This Policy</h2>
+            <p>
+              We may update this Privacy Policy as Ordia develops and its
+              features or data practices change. Any revised version will be
+              published on this page with an updated revision date.
+            </p>
+            <p>Users are encouraged to review this page periodically.</p>
+
+            <h2>13. Contact Us</h2>
+            <p>
+              If you have questions about this Privacy Policy or how your
+              information is handled, contact us:
+            </p>
+            <p><strong>Platform:</strong> Ordia</p>
+            <p>
+              <strong>Email:</strong> [Insert your official contact email]
+            </p>
+            <p>
+              <strong>Website:</strong> [Insert your official website URL]
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
     <footer class="site-footer">
-      <a class="footer-brand" href="#" aria-label="Ordia home">
-        <span class="footer-mark">O</span>
-        <span>ORDIA</span>
-      </a>
       <p class="footer-note">© 2026 Ordia. All rights reserved.</p>
       <nav class="footer-links" aria-label="Footer navigation">
-        <a href="#getstarted">Get Started</a>
-        <a href="#About">About</a>
-        <a href="#privacy">Privacy Policy</a>
+        <a id="get-started-link" href="#getstarted">Get Started</a>
+        <a id="about-link" href="#About">About Us</a>
+        <a id="privacy-link" href="#privacy">Privacy Policy</a>
       </nav>
     </footer>
 
@@ -253,5 +525,6 @@
     <script src="assets/js/faq-data.js"></script>
     <script src="assets/js/faq.js"></script>
     <script src="assets/js/plans.js"></script>
+    <script src="assets/js/legal.js"></script>
   </body>
 </html>
