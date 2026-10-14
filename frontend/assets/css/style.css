@@ -996,6 +996,21 @@ h1 span {
   .faq-heading h1 {
     font-size: 2.6rem;
   }
+
+  .site-footer {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 3rem 1.5rem 0;
+  }
+
+  .footer-note {
+    width: 100%;
+    order: 3;
+  }
+
+  .footer-links {
+    margin-left: auto;
+  }
 }
 
 /*Billing cards */
@@ -1387,7 +1402,7 @@ h3 {
 /* Ordia plan modal overrides the imported billing template without changing the app shell. */
 body {
   display: block;
-  overflow: hidden;
+  overflow: auto;
   padding: 0;
   line-height: normal;
 }
@@ -1399,7 +1414,7 @@ body {
 
 .welcome-panel {
   min-height: 100vh;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .plans-overlay {
@@ -1632,6 +1647,63 @@ body {
   color: var(--muted);
   font-size: 0.78rem;
   text-align: center;
+}
+
+.site-footer {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  min-height: 5rem;
+  margin: 4rem 3rem 0 25rem;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(118, 97, 220, 0.16);
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--ink);
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+}
+
+.footer-mark {
+  display: grid;
+  width: 1.6rem;
+  height: 1.6rem;
+  place-items: center;
+  color: var(--ink);
+  background: var(--lime);
+  border-radius: 50%;
+  font-size: 0.65rem;
+  letter-spacing: 0;
+}
+
+.footer-note {
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+  margin-left: auto;
+}
+
+.footer-links a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: var(--purple);
+  outline: none;
 }
 
 @media (max-width: 700px) {
