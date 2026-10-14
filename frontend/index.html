@@ -23,8 +23,10 @@
         <span>ORDIA</span>
       </a>
       <nav class="topbar-links" aria-label="Quick links">
-        <a class="topbar-link current" href="#">Focus</a>
-        <a id="plans-link" class="topbar-link" href="#plans">Plans</a>
+        <a class="topbar-link current" href="#" data-auth-required>Focus</a>
+        <a id="plans-link" class="topbar-link" href="#plans" data-auth-required
+          >Plans</a
+        >
         <a id="faqs-link" class="topbar-link" href="#faqs">FAQs</a>
       </nav>
       <div class="topbar-actions">
@@ -38,10 +40,16 @@
           class="icon-button notification-button"
           type="button"
           aria-label="Notifications"
+          data-auth-required
         >
           <i data-lucide="bell" aria-hidden="true"></i>
         </button>
-        <button class="icon-button" type="button" aria-label="Settings">
+        <button
+          class="icon-button"
+          type="button"
+          aria-label="Settings"
+          data-auth-required
+        >
           <i data-lucide="settings" aria-hidden="true"></i>
         </button>
         <div class="clerk-auth" aria-live="polite">
@@ -72,7 +80,7 @@
       </div>
       <p class="nav-caption">Your space to grow</p>
       <div id="navcomponents">
-        <a class="navcomponent active" href="#"
+        <a class="navcomponent active" href="#" data-auth-required
           ><i
             class="nav-icon"
             data-lucide="layout-dashboard"
@@ -80,11 +88,11 @@
           ></i
           >Dashboard</a
         >
-        <a class="navcomponent" href="#"
+        <a class="navcomponent" href="#" data-auth-required
           ><i class="nav-icon" data-lucide="sparkles" aria-hidden="true"></i
           >Community</a
         >
-        <a class="navcomponent" href="#"
+        <a class="navcomponent" href="#" data-auth-required
           ><i
             class="nav-icon"
             data-lucide="book-open-check"
@@ -92,11 +100,11 @@
           ></i
           >Learning Plan</a
         >
-        <a class="navcomponent" href="#"
+        <a class="navcomponent" href="#" data-auth-required
           ><i class="nav-icon" data-lucide="list-checks" aria-hidden="true"></i
           >To-do List</a
         >
-        <a class="navcomponent" href="#agent"
+        <a class="navcomponent" href="#agent" data-auth-required
           ><i class="nav-icon" data-lucide="bot" aria-hidden="true"></i>My
           Agent</a
         >

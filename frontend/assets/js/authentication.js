@@ -24,6 +24,7 @@ window.addEventListener("load", async () => {
       formFieldLabel: "ordia-clerk-label",
       formFieldInput: "ordia-clerk-input",
       formButtonPrimary: "ordia-clerk-primary-button",
+      footer: "ordia-clerk-footer",
       footerActionLink: "ordia-clerk-link",
       identityPreviewEditButton: "ordia-clerk-link",
       userButtonPopoverCard: "ordia-clerk-user-card",
@@ -36,6 +37,22 @@ window.addEventListener("load", async () => {
   const userButtonContainer = document.getElementById("clerk-user-button");
   const joinOrdiaButton = document.getElementById("join-ordia");
   let userButtonMounted = false;
+
+  // Signed-out visitors must authenticate before opening app features.
+  document.addEventListener(
+    "click",
+    (event) => {
+      const protectedTarget = event.target.closest("[data-auth-required]");
+      const user = Clerk.user ?? Clerk.session?.user;
+
+      if (!protectedTarget || user) return;
+
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      Clerk.openSignUp({ appearance: clerkAppearance });
+    },
+    true,
+  );
 
   const setControlVisibility = (element, visible) => {
     element.hidden = !visible;
@@ -80,11 +97,6 @@ window.addEventListener("load", async () => {
   });
 
   renderAuthControls();
-
-  // Prompt visitors to create an account when they first open the app.
-  if (!Clerk.user) {
-    Clerk.openSignUp({ appearance: clerkAppearance });
-  }
 
   Clerk.addListener((resources) => renderAuthControls(resources));
 });

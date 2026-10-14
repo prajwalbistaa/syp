@@ -197,10 +197,13 @@ body.faq-open {
 .signed-in-controls {
   display: flex;
   align-items: center;
+  height: 2.25rem;
+  line-height: 1;
 }
 
 .auth-controls {
   gap: 0.35rem;
+  margin: 0;
 }
 
 .auth-button {
@@ -235,11 +238,14 @@ body.faq-open {
 }
 
 .signed-in-controls {
-  min-height: 2.25rem;
+  min-height: 0;
+  margin: 0;
 }
 
 .signed-in-controls .cl-userButton-root {
   display: flex;
+  height: 2.25rem;
+  margin: 0;
 }
 
 /* Clerk modal/user-button overrides so hosted auth matches the Ordia UI. */
@@ -256,6 +262,15 @@ body.faq-open {
 .ordia-clerk-card {
   border: 1px solid #e5e0f2;
   box-shadow: 0 24px 60px rgba(69, 54, 145, 0.2);
+}
+
+.ordia-clerk-footer {
+  position: relative;
+  z-index: 1;
+  margin-top: -0.9rem;
+  padding-top: 0.35rem;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .ordia-clerk-title {
@@ -333,7 +348,7 @@ body.faq-open {
   min-height: 33rem;
   width: 15rem;
   padding: 1.5rem 0.85rem 1rem;
-  margin: 6rem 0 2rem 2rem;
+  margin: 6.35rem 0 2rem 2rem;
   border: 1px solid rgba(255, 255, 255, 0.24);
   border-radius: 24px;
   position: fixed;
@@ -490,8 +505,8 @@ h1 span {
   gap: 1.2rem;
   padding: 0.9rem 1.1rem;
   color: var(--ink);
-  background: white;
-  border: 1px solid #e5e0f2;
+  background: var(--lime);
+  border: 1px solid rgba(48, 37, 74, 0.08);
   border-radius: 12px;
   box-shadow: 0 12px 30px rgba(69, 54, 145, 0.1);
   font-size: 0.86rem;
