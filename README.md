@@ -1,7 +1,10 @@
-Ordia
+# Ordia
 
-Plan your learning. Stay focused. Track your progress. Keep growing.
+Plan your learning. Stay focused. Track your progress.
 
-Ordia is a learning management platform designed to help people organise their self-learning journey in one place. It aims to bring learning plans, resources, tasks, progress tracking, and focused study sessions together in a simple and organised workspace.
+## About
 
-Whether you are learning programming, preparing for a certification, developing professional skills, or exploring a new subject, Ordia aims to help you turn your learning goals into a structured and manageable process.
+Ordia is a learning management platform for organising
+learning plans, resources, tasks, and progress.
+It helps to curate different learning resources and materials
+in an organized library that will help to track progress.
